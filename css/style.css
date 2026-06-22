@@ -1,0 +1,262 @@
+css/style.css
+/* ============================================================
+   MENTORIA HELENA PRADO — Folha de estilo
+   ------------------------------------------------------------
+   Estetica "dark academia": pergaminho, vinho e dourado.
+   Organizacao: variaveis -> base -> componentes -> secoes ->
+   responsividade (media queries) no final.
+   ============================================================ */
+
+/* ---------- Variaveis de cor (paleta do projeto) ---------- */
+:root {
+
+  --tinta:       #23284A;  /* azul-tinta: titulos e texto forte */
+  --vinho:       #7B2D3A;  /* cor principal: botoes e destaques */
+  --vinho-escuro:#5F222C;
+  --ouro:        #C8A24B;  /* detalhe (linhas, bordas) */
+  --pergaminho:  #F4EBD9;  /* fundo */
+  --pergaminho-2:#EADFC6;  /* fundo alternado das secoes */
+  --branco:      #FFFDF8;
+  --cinza:       #5A5446;  /* texto de apoio */
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, Arial, sans-serif;
+  color: var(--tinta);
+  background: var(--pergaminho);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+  color: var(--tinta);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 1rem; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0 0 1rem; }
+h3 { font-size: 1.25rem; margin: 0 0 .5rem; }
+
+a { color: var(--vinho); }
+
+img { max-width: 100%; height: auto; display: block; } /* imagens flexiveis */
+
+/* Acessibilidade: foco visivel para navegacao por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--ouro);
+  outline-offset: 2px;
+}
+
+/* Link "pular para o conteudo": some da tela, aparece ao focar */
+.pular-conteudo {
+  position: absolute;
+  left: -999px; top: 0;
+  background: var(--tinta);
+  color: var(--branco);
+  padding: .72rem 1rem;
+  z-index: 1000;
+  border-radius: 0 0 8px 0;
+}
+.pular-conteudo:focus { left: 0; }
+
+/* "eyebrow": rotulo pequeno acima dos titulos */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  font-size: .8rem;
+  font-weight: 750;
+  color: var(--vinho);
+  margin: 0 0 .4rem;
+}
+
+.subtitulo { color: var(--cinza); max-width: 640px; margin: .25rem auto 0; }
+.container-estreito { max-width: 760px; }
+
+/* ---------- Botoes ---------- */
+.btn-principal {
+  background: var(--vinho);
+  color: var(--branco);
+  border: 2px solid var(--vinho);
+  border-radius: 999px;
+  padding: .7rem 1.6rem;
+  font-weight: 700;
+}
+.btn-principal:hover { background: var(--vinho-escuro); border-color: var(--vinho-escuro); color: var(--branco); }
+
+.btn-contorno {
+  background: transparent;
+  color: var(--vinho);
+  border: 2px solid var(--vinho);
+  border-radius: 999px;
+  padding: .7rem 1.6rem;
+  font-weight: 700;
+}
+.btn-contorno:hover { background: var(--vinho); color: var(--branco); }
+
+/* ---------- Navbar ---------- */
+.navbar-mentoria {
+  background: var(--pergaminho);
+  border-bottom: 2px solid var(--ouro);
+  position: sticky;
+  top: 0;
+  z-index: 520;
+}
+.marca {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--tinta);
+}
+.navbar-mentoria .nav-link { color: var(--tinta); font-weight: 600; }
+.navbar-mentoria .nav-link:hover { color: var(--vinho); }
+.nav-cta {
+  background: var(--vinho);
+  color: var(--branco) !important;
+  border-radius: 999px;
+  padding: .35rem 1rem !important;
+}
+.nav-cta:hover { background: var(--vinho-escuro); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--pergaminho) 0%, var(--pergaminho-2) 100%);
+  padding: 3.5rem 0 4rem;
+}
+.hero-texto { font-size: 1.1rem; color: var(--cinza); max-width: 520px; }
+.hero-botoes { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
+.hero-img {
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(35, 40, 74, .18);
+  border: 4px solid var(--branco);
+  margin: 0 auto;
+}
+
+/* ---------- Secoes ---------- */
+.secao { padding: 4rem 0; }
+.secao-clara { background: var(--pergaminho-2); }
+
+.img-sobre {
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(35, 40, 74, .14);
+  border: 4px solid var(--branco);
+}
+
+/* ---------- Cards de materia ---------- */
+.card-materia {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--branco);
+  box-shadow: 0 8px 22px rgba(35, 40, 74, .08);
+  border-top: 4px solid var(--ouro);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card-materia:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(35,40,74,.16); }
+.card-materia .card-title { color: var(--tinta); }
+.card-materia .card-text { color: var(--cinza); }
+.preco { font-weight: 700; color: var(--vinho); margin: 0; }
+
+/* ---------- Passos (como funciona) ---------- */
+.passos {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.passos li {
+  background: var(--branco);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(35,40,74,.06);
+}
+.passo-num {
+  display: inline-grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--vinho);
+  color: var(--branco);
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
+}
+
+/* ---------- FAQ (acordeao feito por nos) ---------- */
+.faq { margin-top: 2rem; }
+.faq-item {
+  background: var(--branco);
+  border-radius: 12px;
+  margin-bottom: .8rem;
+  box-shadow: 0 4px 14px rgba(35,40,74,.06);
+  overflow: hidden;
+}
+.faq-pergunta {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1.1rem 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--tinta);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-sinal { color: var(--vinho); font-size: 1.6rem; line-height: 1; transition: transform .2s ease; }
+.faq-pergunta[aria-expanded="true"] .faq-sinal { transform: rotate(45deg); }
+.faq-resposta { padding: 0 1.25rem 1.1rem; color: var(--cinza); }
+
+/* ---------- Contato ---------- */
+.lista-contato { list-style: none; padding: 0; }
+.lista-contato li { padding: .35rem 0; border-bottom: 1px solid var(--pergaminho-2); }
+.form-orcamento { background: var(--branco); padding: 1.75rem; border-radius: 16px; box-shadow: 0 8px 22px rgba(35,40,74,.08); }
+.form-control { border-radius: 10px; }
+.form-control.erro { border-color: var(--vinho); background: #fbf2f3; }
+
+.form-aviso { margin: 1rem 0 0; font-weight: 700; min-height: 1.2rem; }
+.form-aviso.ok   { color: #2e7d32; }
+.form-aviso.ruim { color: var(--vinho-escuro); }
+
+/* ---------- Rodape ---------- */
+.rodape {
+  background: var(--tinta);
+  color: #EFE9DC;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+.rodape p { margin: .2rem 0; }
+.rodape-marca { font-family: "Fraunces", serif; font-size: 1.4rem; }
+.rodape-mini { color: #B9B3A6; font-size: .85rem; margin-top: 1rem; }
+
+/* ============================================================
+   RESPONSIVIDADE — media queries
+   ============================================================ */
+@media (max-width: 768px) {
+  .passos { grid-template-columns: 1fr; }
+  .hero { padding: 2.5rem 0 3rem; text-align: center; }
+  .hero-texto { margin-left: auto; margin-right: auto; }
+  .hero-botoes { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .secao { padding: 2.8rem 0; }
+  .hero-botoes .btn { width: 100%; }
+  .form-orcamento { padding: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
