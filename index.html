@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MENTORIA HELENA PRADO — Professora particular / mentora de estudos
+  Estudo de Caso Integrador | Desenvolvimento Front-end (UCB)
+  ------------------------------------------------------------
+  Personagem ORIGINAL inspirada no arquetipo da aluna brilhante,
+  organizada e apaixonada por livros. HTML semantico: header, nav,
+  main, section, article e footer representam o SIGNIFICADO do
+  conteudo, nao apenas a aparencia.
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mentoria Helena Prado: aulas particulares e mentoria de estudos para o ensino medio e ENEM. Agende uma aula experimental pelo WhatsApp." />
+  <title>Mentoria Helena Prado | Aulas particulares e preparacao para o ENEM</title>
+
+  <!-- Bootstrap 5 via CDN (uso introdutorio: navbar, grid e botoes) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Fontes (com fallback do sistema) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Nosso CSS externo (identidade visual) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Acessibilidade: link "pular" para teclado/leitor de tela -->
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteudo</a>
+
+  <!-- ===================== CABECALHO + NAVEGACAO ===================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-mentoria" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand marca" href="#inicio">
+          <span aria-hidden="true">&#128218;</span> Helena Prado
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu" aria-controls="menu"
+                aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#materias">Materias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">Duvidas</a></li>
+            <li class="nav-item"><a class="nav-link nav-cta" href="#contato">Aula experimental</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO (apresentacao) ===================== -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <p class="eyebrow">Aulas particulares &bull; Ensino medio e ENEM</p>
+            <h1>Estudar do jeito certo tem o seu segredo</h1>
+            <p class="hero-texto">
+              Sou a Helena. Ajudo estudantes a sairem da decoreba para um
+              metodo organizado de verdade: plano de estudos, fichamentos e
+              acompanhamento ate a prova. Conhecimento e a melhor magia.
+            </p>
+            <div class="hero-botoes">
+              <!-- Chamada para acao principal: leva ao WhatsApp -->
+              <a class="btn btn-principal btn-lg"
+                 href="https://wa.me/5561999999999?text=Ola%20Helena!%20Quero%20agendar%20uma%20aula%20experimental."
+                 target="_blank" rel="noopener">
+                Agendar aula experimental
+              </a>
+              <a class="btn btn-contorno btn-lg" href="#materias">Ver materias</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="img/hero.svg" class="hero-img"
+                 alt="Mesa de estudos da Helena com livros, cadernos e luminaria" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section id="sobre" class="secao">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-md-5">
+            <img src="img/sobre.svg" class="img-sobre"
+                 alt="Retrato da Helena Prado, professora particular" />
+          </div>
+          <div class="col-md-7">
+            <p class="eyebrow">Quem ensina</p>
+            <h2>Oi, eu sou a Helena</h2>
+            <article>
+              <p>
+                Sempre fui aquela aluna que adorava biblioteca, anotava tudo e
+                montava resumo para os colegas antes da prova. Transformei esse
+                gosto por organizar o estudo em profissao: hoje sou professora
+                particular e mentora de estudos.
+              </p>
+              <p>
+                Acredito que <strong>qualquer pessoa aprende quando tem o metodo
+                certo e alguem por perto.</strong> Trabalho com poucos alunos por
+                vez para acompanhar cada um com atencao.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MATERIAS (grid de cards do Bootstrap) ===================== -->
+    <section id="materias" class="secao secao-clara">
+      <div class="container">
+        <p class="eyebrow text-center">No que eu te ajudo</p>
+        <h2 class="text-center">Materias e mentoria</h2>
+        <p class="subtitulo text-center">
+          Aulas individuais, online ou presenciais. Valores de referencia por
+          hora-aula, ajustados no plano combinado com cada aluno.
+        </p>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/matematica.svg" class="card-img-top" alt="Material de aula de matematica" />
+              <div class="card-body">
+                <h3 class="card-title">Matematica</h3>
+                <p class="card-text">Do basico ao nivel ENEM, com foco em entender o raciocinio, nao decorar.</p>
+                <p class="preco">a partir de R$ 60/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/redacao.svg" class="card-img-top" alt="Caderno de redacao para o ENEM" />
+              <div class="card-body">
+                <h3 class="card-title">Redacao para o ENEM</h3>
+                <p class="card-text">Estrutura da dissertacao, repertorio e correcao detalhada texto a texto.</p>
+                <p class="preco">a partir de R$ 70/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/ingles.svg" class="card-img-top" alt="Recursos de aula de ingles" />
+              <div class="card-body">
+                <h3 class="card-title">Ingles</h3>
+                <p class="card-text">Conversacao, gramatica e leitura para a escola, provas e o dia a dia.</p>
+                <p class="preco">a partir de R$ 60/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/ciencias.svg" class="card-img-top" alt="Materiais de ciencias da natureza" />
+              <div class="card-body">
+                <h3 class="card-title">Ciencias da natureza</h3>
+                <p class="card-text">Apoio em Fisica, Quimica e Biologia, com exercicios e revisao guiada.</p>
+                <p class="preco">a partir de R$ 65/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/tecnicas.svg" class="card-img-top" alt="Plano de estudos e tecnicas de organizacao" />
+              <div class="card-body">
+                <h3 class="card-title">Tecnicas de estudo</h3>
+                <p class="card-text">Plano de estudos, fichamento, revisao espacada e organizacao da rotina.</p>
+                <p class="preco">a partir de R$ 55/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-materia h-100">
+              <img src="img/enem.svg" class="card-img-top" alt="Cronograma de preparacao para o ENEM" />
+              <div class="card-body">
+                <h3 class="card-title">Mentoria ENEM</h3>
+                <p class="card-text">Acompanhamento completo ate a prova: cronograma, metas e simulados.</p>
+                <p class="preco">pacote mensal sob consulta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA (sequencia real = numeros fazem sentido) ===================== -->
+    <section id="como-funciona" class="secao">
+      <div class="container">
+        <p class="eyebrow text-center">Passo a passo</p>
+        <h2 class="text-center">Como funciona</h2>
+        <ol class="passos">
+          <li>
+            <span class="passo-num" aria-hidden="true">1</span>
+            <h3>Aula experimental</h3>
+            <p>Conversamos sobre suas dificuldades e fazemos uma aula para se conhecerem.</p>
+          </li>
+          <li>
+            <span class="passo-num" aria-hidden="true">2</span>
+            <h3>Plano de estudos</h3>
+            <p>Monto um plano sob medida, com metas, materias e rotina possivel para voce.</p>
+          </li>
+          <li>
+            <span class="passo-num" aria-hidden="true">3</span>
+            <h3>Acompanhamento</h3>
+            <p>Aulas regulares, correcoes e ajustes no plano ate voce alcancar o objetivo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ (1a funcionalidade JavaScript) ===================== -->
+    <section id="faq" class="secao secao-clara">
+      <div class="container container-estreito">
+        <p class="eyebrow text-center">Antes de comecar</p>
+        <h2 class="text-center">Duvidas frequentes</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false" aria-controls="resp1">
+              As aulas sao online ou presenciais?
+              <span class="faq-sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-resposta" id="resp1" hidden>
+              <p>As duas opcoes. Online por chamada de video ou presencial na regiao, voce escolhe no agendamento.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false" aria-controls="resp2">
+              Para quais series voce da aula?
+              <span class="faq-sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-resposta" id="resp2" hidden>
+              <p>Foco no ensino medio e em quem esta se preparando para o ENEM e vestibulares.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false" aria-controls="resp3">
+              Como funciona o material de estudo?
+              <span class="faq-sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-resposta" id="resp3" hidden>
+              <p>Eu preparo resumos, listas de exercicios e um plano de estudos personalizado, sem custo extra.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false" aria-controls="resp4">
+              Como agendo e como e o pagamento?
+              <span class="faq-sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-resposta" id="resp4" hidden>
+              <p>E so chamar no WhatsApp para marcar a aula experimental. O pagamento das aulas regulares e por Pix.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO (2a funcionalidade JavaScript: validacao) ===================== -->
+    <section id="contato" class="secao">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <p class="eyebrow">Vamos comecar</p>
+            <h2>Agende sua aula experimental</h2>
+            <p>Prefere falar direto? Chame no WhatsApp ou no Instagram.</p>
+            <ul class="lista-contato">
+              <li><strong>WhatsApp:</strong>
+                <a href="https://wa.me/5561999999999" target="_blank" rel="noopener">(61) 99999-9999</a>
+              </li>
+              <li><strong>Instagram:</strong>
+                <a href="https://instagram.com/" target="_blank" rel="noopener">@mentoriahelenaprado</a>
+              </li>
+              <li><strong>Atendimento:</strong> segunda a sexta, das 14h as 20h</li>
+              <li><strong>Regiao:</strong> Gama e entorno, Brasilia-DF (e online)</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- Formulario simulado: NAO envia de verdade (requisito da disciplina).
+                 O JavaScript valida os campos e mostra uma mensagem. -->
+            <form id="form-contato" class="form-orcamento" novalidate>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Seu nome</label>
+                <input type="text" id="nome" name="nome" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label for="whatsapp" class="form-label">WhatsApp para contato</label>
+                <input type="text" id="whatsapp" name="whatsapp" class="form-control"
+                       inputmode="tel" placeholder="(61) 90000-0000" required />
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Qual materia ou objetivo voce precisa?</label>
+                <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-principal btn-lg">Enviar pedido</button>
+
+              <!-- aria-live: leitores de tela anunciam a mensagem quando ela aparece -->
+              <p id="form-aviso" class="form-aviso" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPE ===================== -->
+  <footer class="rodape">
+    <div class="container">
+      <p class="rodape-marca"><span aria-hidden="true">&#128218;</span> Mentoria Helena Prado</p>
+      <p>Aulas particulares e mentoria de estudos &bull; Brasilia-DF</p>
+      <p class="rodape-mini">Projeto academico - Desenvolvimento Front-end (UCB) &copy; 2025</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (necessario para o menu "hamburguer") -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Nosso JavaScript (FAQ + validacao) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
