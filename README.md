@@ -40,7 +40,7 @@ materias atendidas, como as aulas funcionam, uma ideia de valor e o contato.
 
 ## Objetivo do site
 
-A acao principal esperada do visitante e **agendar uma aula experimental pelo
+A ação principal esperada do visitante e **agendar uma aula experimental pelo
 WhatsApp**. A pagina inteira conduz ate essa acao, com botoes de chamada para
 acao no topo, no menu e na secao de contato.
 
